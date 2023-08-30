@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CustomItemMaker extends JavaPlugin {
 
+    private static CustomItemMaker INSTANCE;
     private ItemRegistry itemRegistry;
     private ItemHandler itemHandler;
     private CustomItemRegistry customItemRegistry;
@@ -45,5 +46,9 @@ public final class CustomItemMaker extends JavaPlugin {
 
     public ItemRegistry getItemRegistry() {
         return itemRegistry;
+    }
+
+    public static CustomItemMaker getInstance() {
+        return INSTANCE;
     }
 }
