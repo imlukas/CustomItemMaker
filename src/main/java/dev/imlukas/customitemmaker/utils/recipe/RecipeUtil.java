@@ -14,9 +14,7 @@ import java.util.Map;
 
 public class RecipeUtil {
 
-    public static ShapedRecipe create(JavaPlugin plugin, ConfigurationSection section, ItemStack item) {
-        String recipeKey = section.getString("key");
-
+    public static ShapedRecipe create(JavaPlugin plugin, String recipeKey, ConfigurationSection section, ItemStack item) {
         String[] shape = new String[3];
         List<String> shapeList = section.getStringList("shape");
         for (int i = 0; i < shapeList.size(); i++) {

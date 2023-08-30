@@ -29,6 +29,6 @@ public class ShowCaseItem extends CustomItem {
 
     @Override
     public String getIdentifier() {
-        return null;
+        return "showcase-item";
     }
 }

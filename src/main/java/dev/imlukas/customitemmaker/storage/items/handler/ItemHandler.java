@@ -30,7 +30,7 @@ public class ItemHandler extends YMLBase {
             ConfigurationSection recipeSection = getConfiguration().getConfigurationSection(key + ".recipe");
 
             if (recipeSection != null) {
-                RecipeUtil.create(plugin, recipeSection, item);
+                RecipeUtil.create(plugin, key, recipeSection, item);
             }
 
             itemRegistry.register(key, item);
