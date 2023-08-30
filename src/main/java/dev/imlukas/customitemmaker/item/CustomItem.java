@@ -33,7 +33,7 @@ public abstract class CustomItem {
     private final Set<Class<? extends Event>> registeredEvents = Sets.newConcurrentHashSet();
     private final List<ScheduledTask> runningTasks = new ArrayList<>();
 
-    protected CustomItem(CustomItemMaker plugin) {
+    public CustomItem(CustomItemMaker plugin) {
         this.plugin = plugin;
         this.itemRegistry = plugin.getItemRegistry();
 

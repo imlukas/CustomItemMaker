@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class ShowCaseItem extends CustomItem {
 
-    protected ShowCaseItem(CustomItemMaker plugin) {
+    public ShowCaseItem(CustomItemMaker plugin) {
         super(plugin);
 
         setRightClickAction(event -> {
