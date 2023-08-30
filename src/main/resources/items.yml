@@ -1,0 +1,127 @@
+ender-bow:
+  type: BOW
+  name: "&c&lEnder Bow"
+  model-data: 1
+  lore:
+    - "&eTeleporting Bow"
+  recipe:
+    key: ender-bow
+    materials:
+      E: ENDER_PEARL
+      S: STICK
+      T: STRING
+    shape:
+      - ". S T"
+      - "E . T"
+      - ". S T"
+dragon-cannon:
+  type: STICK
+  name: "&c&lDragon Cannon"
+  model-data: 2
+  lore:
+    - "&eUse the Breath of Dragons"
+  recipe:
+    key: dragon-cannon
+    materials:
+      S: INK_SAC
+      C: COAL
+      B: BLAZE_POWDER
+    shape:
+      - ". S ."
+      - "C B C"
+      - ". S ."
+golem-staff:
+  type: STICK
+  name: "&c&lGolem Staff"
+  model-data: 3
+  lore:
+    - "&eSummon Golem Bodyguards"
+  recipe:
+    key: golem-staff
+    materials:
+      B: IRON_BLOCK
+      I: IRON_INGOT
+      R: POPPY
+    shape:
+      - ". B ."
+      - ". I ."
+      - ". R ."
+skeleton-bow:
+  type: STICK
+  name: "&c&lSkeleton Bow"
+  model-data: 4
+  lore:
+    - "&eSpray N' Pray"
+  recipe:
+    key: skeleton-bow
+    materials:
+      B: BONE
+      S: STRING
+    shape:
+      - ". B S"
+      - "B . S"
+      - ". B S"
+zombie-sword:
+  type: IRON_SWORD
+  name: "&c&lZombie Leg"
+  model-data: 5
+  lore:
+    - "&eSteal Hearts on Each Hit"
+  recipe:
+    key: zombie-sword
+    materials:
+      B: ROTTEN_FLESH
+      S: OAK_LOG
+    shape:
+      - ". B ."
+      - ". B ."
+      - ". S ."
+villager-wand:
+  type: STICK
+  name: "&c&lVillager Wand"
+  model-data: 6
+  lore:
+    - "&eBridge Builder"
+  recipe:
+    key: villager-wand
+    materials:
+      B: DIRT
+      S: EMERALD
+      W: WHEAT
+    shape:
+      - ". B ."
+      - "W S W"
+      - ". B ."
+beef-baton:
+  type: STICK
+  name: "&c&lBeef Baton"
+  model-data: 7
+  enchantments:
+    knockback: 5
+  lore:
+    - "&eI Like My Enemies... Well Done"
+  recipe:
+    key: beef-baton
+    materials:
+      B: TORCH
+      S: BEEF
+      W: STICK
+    shape:
+      - ". B ."
+      - ". S ."
+      - ". W ."
+bacon-bomb:
+  type: STICK
+  name: "&c&lBacon Bomb"
+  model-data: 8
+  lore:
+    - "&eWeaponize Bacon"
+  recipe:
+    key: bacon-bomb
+    materials:
+      B: PORKCHOP
+      S: GUNPOWDER
+    shape:
+      - ". B ."
+      - "B S B"
+      - ". B ."

@@ -1,0 +1,9 @@
+name: ZyphCustomItems
+version: '${version}'
+main: dev.imlukas.customitemmaker.ZyphCustomItems
+api-version: '1.16'
+commands:
+  giveitem:
+    description: Give a custom item to a player
+    usage: /giveitem <player> <item>
+
