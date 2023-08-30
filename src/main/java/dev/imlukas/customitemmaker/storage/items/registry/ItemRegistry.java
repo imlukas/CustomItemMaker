@@ -2,7 +2,9 @@ package dev.imlukas.customitemmaker.storage.items.registry;
 
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ItemRegistry {
@@ -25,5 +27,9 @@ public class ItemRegistry {
         items.remove(identifier);
     }
 
+
+    public List<String> getItemNames() {
+        return new ArrayList<>(items.keySet());
+    }
 
 }

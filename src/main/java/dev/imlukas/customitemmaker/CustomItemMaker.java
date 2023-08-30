@@ -1,6 +1,7 @@
 package dev.imlukas.customitemmaker;
 
-import dev.imlukas.customitemmaker.command.GiveItemCommand;
+import dev.imlukas.customitemmaker.command.GiveCustomCommand;
+import dev.imlukas.customitemmaker.command.GiveDefaultCommand;
 import dev.imlukas.customitemmaker.item.registry.CustomItemRegistry;
 import dev.imlukas.customitemmaker.listener.RightClickListener;
 import dev.imlukas.customitemmaker.storage.items.handler.ItemHandler;
@@ -19,7 +20,8 @@ public final class CustomItemMaker extends JavaPlugin {
         itemHandler = new ItemHandler(this);
         customItemRegistry = new CustomItemRegistry();
 
-        getCommand("giveitem").setExecutor(new GiveItemCommand(this));
+        getCommand("giveitem").setExecutor(new GiveDefaultCommand(this));
+        getCommand("givecustom").setExecutor(new GiveCustomCommand(this));
         registerListener(new RightClickListener(this));
 
     }

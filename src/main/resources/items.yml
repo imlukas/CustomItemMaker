@@ -1,15 +1,19 @@
 showcase-item:
   type: BOW
   name: "&c&lShowcase Item"
-  model-data: 1
+  amount: 10 # Amount of items in the stack
+  model-data: 1 # Model data for the item, used for custom texture packs.
   lore:
     - "&eItem used to showcase"
   recipe:
     materials:
-      E: ENDER_PEARL
+      D: DIAMOND
       S: STICK
-      T: STRING
     shape:
-      - ". S T"
-      - "E . T"
-      - ". S T"
+      - "D D D"
+      - "D S D"
+      - "D D D"
+  glow: false # If true the item will have enchantment glint
+  enchantments:
+    unbreakable: 1
+
