@@ -1,6 +1,6 @@
-name: ZyphCustomItems
+name: CustomItemMaker
 version: '${version}'
-main: dev.imlukas.customitemmaker.ZyphCustomItems
+main: dev.imlukas.customitemmaker.CustomItemMaker
 api-version: '1.16'
 commands:
   givecustom:

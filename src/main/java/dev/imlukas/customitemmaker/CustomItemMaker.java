@@ -17,6 +17,7 @@ public final class CustomItemMaker extends JavaPlugin {
     private CustomItemRegistry customItemRegistry;
     @Override
     public void onEnable() {
+        INSTANCE = this;
         itemRegistry = new ItemRegistry();
         itemHandler = new ItemHandler(this);
         customItemRegistry = new CustomItemRegistry();

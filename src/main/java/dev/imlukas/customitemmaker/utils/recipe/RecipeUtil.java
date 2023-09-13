@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,18 +16,30 @@ import java.util.Map;
 public class RecipeUtil {
 
     public static ShapedRecipe create(JavaPlugin plugin, String recipeKey, ConfigurationSection section, ItemStack item) {
+        ShapedRecipe recipe = new ShapedRecipe(createKey(plugin, recipeKey), item);
+
         String[] shape = new String[3];
         List<String> shapeList = section.getStringList("shape");
         for (int i = 0; i < shapeList.size(); i++) {
-            shape[i] = shapeList.get(i).replaceAll(" ", "");
+            shape[i] = shapeList.get(i).replace(" ", "");
         }
+        recipe.shape(shape);
 
-        Map<Character, ItemStack> ingredients = new HashMap<>();
         for (String key : section.getConfigurationSection("materials").getKeys(false)) {
-            ingredients.put(key.charAt(0), new ItemStack(Material.valueOf(section.getString("materials." + key))));
+            recipe.setIngredient(key.charAt(0), Material.valueOf(section.getString("materials." + key)));
         }
 
-        return create(plugin, recipeKey, item, ingredients, shape);
+        if (Arrays.stream(shape).anyMatch(s -> s.contains("."))) {
+            recipe.setIngredient('.', Material.AIR);
+        }
+
+        registerRecipe(recipe);
+        return recipe;
+    }
+
+    public static ShapedRecipe create(JavaPlugin plugin, ConfigurationSection section, ItemStack item) {
+        String recipeKey = section.getString("key");
+        return create(plugin, recipeKey, section, item);
     }
     public static ShapedRecipe create(JavaPlugin plugin, String key, ItemStack item,
                                       Map<Character, ItemStack> ingredients, String... shape) {
@@ -35,7 +48,11 @@ public class RecipeUtil {
         for (Map.Entry<Character, ItemStack> stringItemStackEntry : ingredients.entrySet()) {
             recipe.setIngredient(stringItemStackEntry.getKey(), stringItemStackEntry.getValue().getType());
         }
-        recipe.setIngredient('.', Material.AIR);
+
+        if (Arrays.stream(shape).anyMatch(s -> s.contains("."))) {
+            recipe.setIngredient('.', Material.AIR);
+        }
+
         registerRecipe(recipe);
         return recipe;
     }

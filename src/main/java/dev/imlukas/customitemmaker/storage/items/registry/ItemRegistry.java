@@ -12,6 +12,11 @@ public class ItemRegistry {
     private final Map<String, ItemStack> items = new HashMap<>();
 
     public ItemStack get(String identifier) {
+
+        if (!items.containsKey(identifier)) {
+            return null;
+        }
+
         return items.get(identifier).clone();
     }
 

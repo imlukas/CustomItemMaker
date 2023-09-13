@@ -1,7 +1,6 @@
 package dev.imlukas.customitemmaker.storage.items.handler;
 
 import dev.imlukas.customitemmaker.CustomItemMaker;
-import dev.imlukas.customitemmaker.item.CustomItem;
 import dev.imlukas.customitemmaker.storage.items.registry.ItemRegistry;
 import dev.imlukas.customitemmaker.utils.PDCUtils.PDCWrapper;
 import dev.imlukas.customitemmaker.utils.item.ItemBuilder;

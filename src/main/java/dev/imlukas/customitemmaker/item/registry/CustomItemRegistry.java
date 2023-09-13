@@ -12,6 +12,10 @@ public class CustomItemRegistry {
     private final Map<String, CustomItem> customItemMap = new HashMap<>();
 
     public CustomItem get(String identifier) {
+        if (!customItemMap.containsKey(identifier)) {
+            return null;
+        }
+
         return customItemMap.get(identifier);
     }
 

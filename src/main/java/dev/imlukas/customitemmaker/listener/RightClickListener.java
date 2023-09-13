@@ -25,7 +25,7 @@ public class RightClickListener implements Listener {
             return;
         }
 
-        if (event.getAction() != Action.RIGHT_CLICK_AIR || event.getAction() != Action.RIGHT_CLICK_BLOCK) {
+        if (event.getAction() != Action.RIGHT_CLICK_AIR && event.getAction() != Action.RIGHT_CLICK_BLOCK) {;
             return;
         }
 

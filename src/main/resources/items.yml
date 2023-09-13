@@ -14,6 +14,7 @@ showcase-item:
       - "D S D"
       - "D D D"
   glow: false # If true the item will have enchantment glint
+
   enchantments:
-    unbreakable: 1
+    unbreaking: 1
 
